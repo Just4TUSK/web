@@ -1,16 +1,16 @@
 import { defineConfig } from 'vite';
 import { dirname, resolve } from 'node:path';
-import {fileURLToPath} from 'node:url';
+import { fileURLToPath } from 'node:url'
 import handlebars from 'vite-plugin-handlebars'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname  = dirname(__filename)
 
 export default defineConfig({
     plugins: [
         handlebars({
             partialDirectory: resolve(__dirname, 'src', 'partials'),
-            context: {siteName: 'Лаборатона 6', labName: 'Лабораторна № 6'},
+            context: { siteName: 'Лабораторна 6', labName: 'Лабораторна № 6' },
             reloadOnPartialChange: true
         }),
     ],
